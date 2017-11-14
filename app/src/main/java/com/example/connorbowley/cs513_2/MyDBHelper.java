@@ -88,6 +88,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
         long id = db.insert(PRODUCT_TABLE_NAME,null,values);
         if(id < 0)
             Toast.makeText(context,"Unable to make product",Toast.LENGTH_SHORT).show();
+        db.close();
         return id != -1;
     }
 
@@ -120,6 +121,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
             Toast.makeText(context,e.getMessage(),Toast.LENGTH_LONG).show();
         } finally {
             db.endTransaction();
+            db.close();
         }
 
         return ret;
@@ -161,6 +163,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
         }
         finally {
             db.endTransaction();
+            db.close();
         }
         return ret;
     }
@@ -215,6 +218,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
             Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
         } finally {
             db.endTransaction();
+            db.close();
         }
         return ret;
     }
@@ -229,9 +233,10 @@ public class MyDBHelper extends SQLiteOpenHelper {
             }
         } catch (Exception e) {
             Toast.makeText(context,e.getMessage(),Toast.LENGTH_LONG).show();
+            db.close();
             return null;
         }
-
+        db.close();
         return products;
     }
 
@@ -248,9 +253,10 @@ public class MyDBHelper extends SQLiteOpenHelper {
 
         } catch (Exception e) {
             Toast.makeText(context, e.getMessage(),Toast.LENGTH_LONG).show();
+            db.close();
             return null;
         }
-
+        db.close();
         return coupons;
     }
 
@@ -274,8 +280,10 @@ public class MyDBHelper extends SQLiteOpenHelper {
 
         } catch (Exception e) {
             Toast.makeText(context, e.getMessage(),Toast.LENGTH_LONG).show();
+            db.close();
             return null;
         }
+        db.close();
         return new ArrayList<>(couponMap.values());
     }
 
@@ -297,8 +305,10 @@ public class MyDBHelper extends SQLiteOpenHelper {
 
         } catch (Exception e) {
             Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
+            db.close();
             return null;
         }
+        db.close();
         return coupon;
     }
 
@@ -309,6 +319,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
         } catch (Exception e) {
             Toast.makeText(context,e.getMessage(),Toast.LENGTH_LONG);
         }
+        db.close();
     }
 
     public ArrayList<Coupon> getCouponsWithProducts(ArrayList<Product> products){
@@ -344,8 +355,10 @@ public class MyDBHelper extends SQLiteOpenHelper {
 
         } catch (Exception e) {
             Toast.makeText(context, e.getMessage(),Toast.LENGTH_LONG).show();
+            db.close();
             return null;
         }
+        db.close();
         return new ArrayList<>(couponMap.values());
     }
 }
