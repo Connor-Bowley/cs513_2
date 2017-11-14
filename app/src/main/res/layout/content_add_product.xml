@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.connorbowley.cs513_2.AddProductActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:showIn="@layout/activity_add_product">
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="189dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/lblName"
+        app:layout_constraintEnd_toEndOf="@+id/btnBack_AddProduct"
+        app:layout_constraintTop_toTopOf="@+id/lblName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="72dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:labelFor="@id/txtName"
+        android:text="@string/lblName"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/lblPrice"
+        android:layout_width="65dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:labelFor="@id/txtPrice"
+        android:text="@string/lblPrice"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/lblName" />
+
+    <EditText
+        android:id="@+id/txtPrice"
+        android:layout_width="187dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/lblPrice"
+        app:layout_constraintEnd_toEndOf="@+id/btnBack_AddProduct"
+        app:layout_constraintTop_toTopOf="@+id/lblPrice"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/subAddProduct"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="140dp"
+        android:text="@string/_Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnBack_AddProduct"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrice" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/_Add_Product"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBack_AddProduct"
+        android:layout_width="148dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/subAddProduct"
+        app:layout_constraintTop_toTopOf="@+id/subAddProduct" />
+
+</android.support.constraint.ConstraintLayout>

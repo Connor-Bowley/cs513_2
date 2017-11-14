@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CS513_2</string>
+    <string name="title">Shopping List</string>
+    <string name="title_activity_add_product">AddProductActivity</string>
+    <string name="lblName">Name</string>
+    <string name="lblPrice">Price</string>
+    <string name="_Add">Add</string>
+    <string name="_Add_Product">Add Product</string>
+    <string name="_Add_Coupon">Add Coupon</string>
+    <string name="_Discount">Discount</string>
+    <string name="GenLargestDiscount">Generate Largest Discount For All Products</string>
+    <string name="DisShopList">Find Best Discount for Shopping List</string>
+    <string name="_budget">Budget</string>
+    <string name="_generate">Generate</string>
+    <string name="back">Back</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="_View_Coupon">View Coupon</string>
+    <string name="findDiscount">Find Discount</string>
+</resources>
